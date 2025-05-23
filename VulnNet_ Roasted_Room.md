@@ -1,4 +1,4 @@
-# Room AD
+# Active Directory Room
 ## VulnNet: Roasted Tryhackme (writeup)
 
 
@@ -47,7 +47,6 @@ Enter WORKGROUP\root's password:
 we will use lookupsid.py
 ```
 root@ubuntu:~# lookupsid.py anonymous@10.10.250.145
-Impacket v0.9.23.dev1+20210315.121412.a16198c3 - Copyright 2020 SecureAuth Corporation
 
 Password:
 [*] Brute forcing SIDs at 10.10.250.145
