@@ -6,7 +6,14 @@
 ```bash
 nmap -sC -sV -p- $target
 ```
-
+### scan for TCP Ports
+```bash
+nmap -Pn -T4 -sS -p- -oN full_tcp_scan.txt $target
+```
+### scan for open ports
+```bash
+nmap -sC -sV -O -oN targeted_scan.txt -p 80, 135, 139, 445, 3389, 49663, 49666, 49667 $target
+```
 ### Open Ports
 
 - **80, 49663** → Microsoft IIS 10.0
